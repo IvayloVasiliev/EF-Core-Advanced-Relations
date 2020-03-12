@@ -10,11 +10,11 @@ namespace BillsPaymentSystem.Data.EntityConfiguration
         {
             builder.Property(b => b.BankName)
                 .HasMaxLength(50)
-                .IsUnicode()
                 .IsRequired();
 
             builder.Property(s => s.SWIFTCode)
                 .HasMaxLength(20)
+                .IsUnicode(false)
                 .IsRequired();
         }
     }

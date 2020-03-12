@@ -10,20 +10,20 @@ namespace BillsPaymentSystem.Data.EntityConfiguration
         {
             builder.Property(f => f.FirstName)
                  .HasMaxLength(50)
-                 .IsUnicode()
                  .IsRequired();
 
             builder.Property(l => l.LastName)
-                 .HasMaxLength(50)
-                 .IsUnicode()
+                 .HasMaxLength(50)                
                  .IsRequired();
 
             builder.Property(e => e.Email)
                  .HasMaxLength(80)
+                 .IsUnicode(false)
                  .IsRequired();
 
             builder.Property(e => e.Password)
                  .HasMaxLength(25)
+                 .IsUnicode(false)
                  .IsRequired();
         }
     }
